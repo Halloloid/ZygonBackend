@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
+    "build":"tsc",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed:data": "tsx prisma/seed.ts"
@@ -12,7 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",

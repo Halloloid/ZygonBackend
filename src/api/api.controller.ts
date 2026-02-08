@@ -30,7 +30,7 @@ export const updateScore = async(req:Request,res:Response) => {
     try {
         const {heroId,delta,adminPin} = req.body;
 
-        const ADMIN_PIN = process.env.ADMIN_PIN || "1234";
+        const ADMIN_PIN = "1234";
         
         if(adminPin !== ADMIN_PIN) return res.status(401).json({message:"Unauthorized"});
         if(!heroId || typeof delta !== "number") return res.status(400).json({error:"hreoId and delat required"});
